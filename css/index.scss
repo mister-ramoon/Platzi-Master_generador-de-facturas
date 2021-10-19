@@ -1,4 +1,193 @@
+//Variables
 $background: #225763;
 $base-color-soft: #41d8bf;
 $base-color-hard: #2f89b3;
 $background-soft: #3b50b2;
+$text: #eee;
+$white-background: #eee;
+
+// All
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Georama", sans-serif;
+}
+body {
+  background-color: $background;
+}
+
+//Header
+.header {
+  padding: 3rem 0;
+  background-color: $base-color-hard;
+
+  .header__title {
+    color: $text;
+    text-align: center;
+    text-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+    font-size: 3.5rem;
+  }
+}
+
+//Main
+.hero {
+  padding: 2rem 1.5rem;
+}
+//Products
+
+.products__title {
+  font-size: 3rem;
+  text-align: center;
+  color: $text;
+  text-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .product {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #41d8bf;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+    height: 500px;
+    width: 300px;
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+      border-radius: 0.5rem;
+    }
+    h3 {
+      color: $text;
+      text-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+      font-size: 2.2rem;
+      margin: 1rem 0;
+    }
+    p {
+      color: $text;
+      text-shadow: 10px 1px 10px rgba($color: #000000, $alpha: 0.7);
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
+    .product__inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 30%;
+        font-size: 1.8rem;
+        box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+      }
+      button {
+        margin: 1rem 0;
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: none;
+        background: $background-soft;
+        box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+        color: $text;
+        font-weight: 600;
+        text-shadow: 10px 1px 10px rgba($color: #000000, $alpha: 0.7);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//Bills
+
+.bills {
+  background: $white-background;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+
+  .bills__title {
+    font-size: 3rem;
+    text-align: center;
+    color: $text;
+    text-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+    color: $background-soft;
+  }
+  p {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+  }
+
+  .bill {
+    border-bottom: 1px solid;
+
+    #priceValue0,
+    #priceValue1,
+    #priceValue2 {
+      display: none;
+    }
+  }
+  .billsDiscount {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+
+    input {
+      border: none;
+      box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem;
+      font-size: 1.4rem;
+    }
+    button {
+      border: none;
+      box-shadow: 1px 1px 10px 1px rgba($color: #000000, $alpha: 0.5);
+      border-radius: 1rem;
+      padding: 1rem;
+      background: $base-color-hard;
+      color: $text;
+      margin: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .productList {
+    flex-direction: row;
+    margin-top: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+
+    .product {
+      margin: 1rem;
+    }
+  }
+  .bills {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
